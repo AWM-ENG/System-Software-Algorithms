@@ -44,7 +44,7 @@ void *add_memory(int size)
     {
         return NULL;
     }
-    int aligned_size = (size + 3) & ~3;
+    int aligned_size = (size + 7) & ~7;
     uint8_t *start = memory;
     uint8_t *end = memory + 1024;
     while (start < end)
