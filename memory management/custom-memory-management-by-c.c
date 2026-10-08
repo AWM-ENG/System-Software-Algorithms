@@ -28,13 +28,16 @@ void init_memory()
 }
 
 //Print memory
-void print_memory(int length)
-{
-    printf("-----Memory-----\n");
-    for(int i =0;i< length;i++)
-    {
-        printf("%d\n",memory[i]);
+void print_memory(void) {
+    printf("===== Memory State =====\n");
+    Header *curr = (Header *)memory;
+    int block = 0;
+    while (curr != NULL) {
+        printf("Block %d: Address=%p | Size=%zu | Status=%s\n",
+               block++, (void *)curr, curr->size, curr->is_free ? "FREE" : "ALLOCATED");
+        curr = curr->postheader;
     }
+    printf("========================\n");
 }
 
 //Add to memory
