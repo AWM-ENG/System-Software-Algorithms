@@ -127,7 +127,12 @@ void remove_memory(void *start)
 int main()
 {
 init_memory();
-
+/* int *a = add_memory(1);
+if (a != NULL)
+{
+    *a = 5;
+}
+ */
 //Your code here to test the memory management functions
 
     return 0;
