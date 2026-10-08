@@ -125,18 +125,29 @@ void remove_memory(void *start)
 
 
 
+int main(void) {
+    init_memory();
+//test code
+    /* printf("--- Initial State ---\n");
+    print_memory();
 
+    void *p1 = add_memory(10);
+    void *p2 = add_memory(20);
+    void *p3 = add_memory(30);
 
-int main()
-{
-init_memory();
-/* int *a = add_memory(1);
-if (a != NULL)
-{
-    *a = 5;
-}
+    printf("\n--- After Allocation ---\n");
+    print_memory();
+
+    printf("\n--- Freeing Middle Block (p2) ---\n");
+    remove_memory(p2);
+    print_memory();
+
+    printf("\n--- Freeing Remaining Blocks (Coalescing) ---\n");
+    remove_memory(p1);
+    remove_memory(p3);
+    print_memory();
  */
-//Your code here to test the memory management functions
+    //Your code here to test the memory management functions
 
     return 0;
 }
